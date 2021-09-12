@@ -28,7 +28,7 @@ if( !isset( $_COOKIE[ 'security' ] ) || !in_array( $_COOKIE[ 'security' ], $secu
 		dvwaSecurityLevelSet( $_DVWA[ 'default_security_level' ] );
 	}
 	else {
-		dvwaSecurityLevelSet( 'impossible' );
+		dvwaSecurityLevelSet( 'low' );
 	}
 
 	if( $_DVWA[ 'default_phpids_level' ] == 'enabled' )
@@ -144,7 +144,7 @@ function dvwaSecurityLevelGet() {
 
 
 function dvwaSecurityLevelSet( $pSecurityLevel ) {
-	if( $pSecurityLevel == 'impossible' ) {
+	if( $pSecurityLevel == 'low' ) {
 		$httponly = true;
 	}
 	else {
@@ -271,7 +271,7 @@ function dvwaHtmlEcho( $pPage ) {
 			$securityLevelHtml = 'high';
 			break;
 		default:
-			$securityLevelHtml = 'impossible';
+			$securityLevelHtml = 'low';
 			break;
 	}
 	// -- END (security cookie)
@@ -518,7 +518,7 @@ function dvwaGuestbook() {
 	$guestbook = '';
 
 	while( $row = mysqli_fetch_row( $result ) ) {
-		if( dvwaSecurityLevelGet() == 'impossible' ) {
+		if( dvwaSecurityLevelGet() == 'low' ) {
 			$name    = htmlspecialchars( $row[0] );
 			$comment = htmlspecialchars( $row[1] );
 		}
