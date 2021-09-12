@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  dvwa_app:
+    build:
+      context: .
+    container_name: dvwa_app
+    volumes:
+      - .:/var/www/html
+    networks:
+    - dvwa_net
+    ports:
+      - "80:80"
+    depends_on:
+      - dvwa_db
+    restart: unless-stopped
+
+  dvwa_db:
+    image: mariadb:10
+    container_name: dvwa_db
+    environment:
+      MARIADB_DATABASE: dvwa
+      MARIADB_USER: dvwa
+      MARIADB_PASSWORD: p@ssw0rd
+      MARIADB_ROOT_PASSWORD: p@ssw0rd
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - dvwa_data:/var/lib/mysql
+    networks:
+      - dvwa_net
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+
+volumes:
+  dvwa_data:
+    driver: local
+
+networks:
+  dvwa_net:
+    driver: bridge
