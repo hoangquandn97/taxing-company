@@ -25,7 +25,7 @@ switch( $_COOKIE[ 'security' ] ) {
 		$vulnerabilityFile = 'high.php';
 		break;
 	default:
-		$vulnerabilityFile = 'impossible.php';
+		$vulnerabilityFile = 'low.php';
 		break;
 }
 
@@ -82,7 +82,7 @@ $page[ 'body' ] .= "
 			<br />
 			<input type=\"submit\" name=\"Upload\" value=\"Upload\" />\n";
 
-if( $vulnerabilityFile == 'impossible.php' )
+if( $vulnerabilityFile == 'low.php' )
 	$page[ 'body' ] .= "			" . tokenField();
 
 $page[ 'body' ] .= "
