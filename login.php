@@ -80,13 +80,14 @@ echo "<!DOCTYPE html>
 
 	<br />
 
-	<p><img src=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/images/login_logo.png\" /></p>
+<!--	<p><img src=\"tax-index.jpeg\" style=\"width\:30%, margin-botton\:100px\"/></p>-->
+	<h1>TAXING LOGIN PAGE</h1>
 
 	<br />
 
 	</div> <!--<div id=\"header\">-->
 
-	<div id=\"content\">
+	<div id=\"content\", >
 
 	<form action=\"login.php\" method=\"post\">
 
@@ -125,7 +126,7 @@ echo "<!DOCTYPE html>
 
 	<div id=\"footer\">
 
-	<p>" . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/', 'Damn Vulnerable Web Application (DVWA)' ) . "</p>
+<!--	<p>" . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/', 'Damn Vulnerable Web Application (DVWA)' ) . "</p>-->
 
 	</div> <!--<div id=\"footer\"> -->
 
