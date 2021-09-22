@@ -1,1 +1,6 @@
-This file is not for sharing because it has some confidential data
+This file is not for sharing because it has some confidential data about employees' salaries.
+
+John Doe: $21/hour
+Jack Baxter: $22/hour
+Michael Nguyen: $23/hour
+==============================
