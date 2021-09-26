@@ -34,7 +34,7 @@
 				<li class="active"><a href="index.php">Home</a></li>
 				<li><a href="#">Service</a></li>
 				<li><a href="about.php">About</a></li>
-				<li><a href="vulnerabilities/upload/index.php">Documents</a></li>
+				<li><a href="documents/upload/index.php">Documents</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
